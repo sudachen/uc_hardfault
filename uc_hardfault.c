@@ -6,7 +6,7 @@
 
 void HardFault_c_handler(HardFault_stack_t *stk)
 {
-    ucError("Hardfault PC: #%?",$x(stk->pc));
+    PRINT_ERROR("Hardfault PC: #%?",$x(stk->pc));
 
     // Debugger detection is only possible on NRF52 (Cortex-M4), on NRF51
     // (Cortex-M0) the processor has no access to CoreDebug registers.
