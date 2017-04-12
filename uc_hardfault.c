@@ -4,6 +4,8 @@
 
 #ifdef __nRF5x_UC__
 
+#include <app_util_platform.h>
+
 void HardFault_c_handler(HardFault_stack_t *stk)
 {
     PRINT_ERROR("Hardfault PC: #%?",$x(stk->pc));
